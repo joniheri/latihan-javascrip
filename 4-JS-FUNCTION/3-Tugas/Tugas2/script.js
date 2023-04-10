@@ -12,7 +12,7 @@ const rupiah = (value) => {
     currency: "IDR",
   }).format(value);
 };
-console.log(rupiah(20000)); // "Rp 20.000,00" -->example
+// console.log(rupiah(20000)); // "Rp 20.000,00" -->example
 
 // Jawaban
 const gajiKarwayawanSebulan = (
