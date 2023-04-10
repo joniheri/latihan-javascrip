@@ -1,37 +1,22 @@
-let tanggalSekarangFull = new Date();
-let tanggalSekarang = tanggalSekarangFull.getDate();
-let indexTanggalSekarang = tanggalSekarangFull.getDay();
-let indexBulanSekarang = tanggalSekarangFull.getMonth();
-let tahunSekarang = tanggalSekarangFull.getFullYear();
-let namaHari = [
-  "minggu",
-  "Senin",
-  "Selasa",
-  "Rabu",
-  "Kamis",
-  "Jum'at",
-  "Sabtu",
-];
-let namaBulan = [
-  "Januari",
-  "Februari",
-  "Maret",
-  "April",
-  "Mei",
-  "Juni",
-  "Juli",
-  "Agustus",
-  "September",
-  "Oktober",
-  "November",
-  "Desember",
-];
+console.log(document.title);
 
-console.log(`Tanggal sekarang: ${tanggalSekarang}`);
-console.log(`Nama hari sekarang: ${namaHari[indexTanggalSekarang]}`);
-console.log(`Bulan sekarang: ${indexBulanSekarang + 1}`);
-console.log(`Nama bulan sekarang: ${namaBulan[indexBulanSekarang]}`);
-console.log(`Tahun sekarang: ${tahunSekarang}`);
-console.log(
-  `Tgl: ${namaHari[indexTanggalSekarang]}, ${tanggalSekarang}-${namaBulan[indexBulanSekarang]}-${tahunSekarang}`
-);
+document.title = "Belajar DOM";
+console.log("Rubah Title menjadi: ", document.title);
+
+let body = document.body;
+
+const welcome = document.createElement("h1");
+welcome.textContent =
+  "<marquee>Ini adalah tag h1 menggunakan JavaScript</marquee>";
+
+const myName = document.createElement("h4");
+myName.innerHTML = "<marquee>JON HERI SOFT</marquee>";
+
+const keterangan = document.createElement("p");
+keterangan.innerText =
+  "<marquee>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae perferendis optio eaque velit id ipsa possimus? Aliquid est sint doloremque, velit maiores cumque recusandae quis nihil quibusdam aspernatur perferendis magnam</marquee>";
+
+body.append("Hello Worl", welcome, myName, keterangan);
+// body.append(welcome);
+// body.append(myName);
+// body.append(keterangan);
