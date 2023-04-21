@@ -56,3 +56,15 @@ dataArray1 += `
 
 document.getElementById("dataArray1").innerHTML = dataArray1;
 document.getElementById("dataArray2").innerHTML = dataArray1;
+
+let displayDataUser = "";
+array1.map((item, index) => {
+  displayDataUser += `<tr>`;
+  displayDataUser += `<td>${index + 1}</td>`;
+  displayDataUser += `<td>${item.fullname}</td>`;
+  displayDataUser += `<td>${item.gender}</td>`;
+  displayDataUser += `<td>${item.age}</td>`;
+  displayDataUser += `</tr>`;
+});
+console.log(`display data:`, displayDataUser);
+document.getElementById("dataUser").innerHTML = displayDataUser;
