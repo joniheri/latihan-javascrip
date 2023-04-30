@@ -84,3 +84,20 @@ array3
       item
     );
   });
+
+array3
+  .sort((a, b) => {
+    if (a.fullname.toLowerCase() < b.fullname.toLowerCase()) {
+      return -1;
+    } else if (a.fullname.toLowerCase() > b.fullname.toLowerCase()) {
+      return 1;
+    }
+  })
+  .map((item, index) => {
+    console.log(
+      "Urutkan berdasarkan Fullname: ",
+      `${index + 1} ${item.fullname}`
+    );
+  });
+
+console.table(array3);

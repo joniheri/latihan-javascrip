@@ -1,4 +1,10 @@
-// cara1 -> function basic
+// cara1 -> function standar
+function sum2(x, y) {
+  console.log(`Function standar, ${x} + ${y}:`, x + y);
+}
+sum2(2, 5);
+
+// cara2 -> function basic
 const sumBasic1 = new Function(
   "console.log(`Function basic part1, 9 + 4:`, 9+4)"
 );
@@ -10,13 +16,7 @@ const sumBasic2 = new Function(
 );
 sumBasic2(9, 4);
 
-// cara2 -> function standar
-function sum2(x, y) {
-  console.log(`Function standar, ${x} + ${y}:`, x + y);
-}
-sum2(2, 5);
-
-// cara -> arroe function
+// cara -> arrow function
 const sum3 = (x, y) => {
   console.log(`Arrow function, ${x} + ${y}:`, x + y);
 };
