@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let string = "1000";
+      const targetCharacter = "1";
+
+      console.log("Nilai Awal: ", string);
+      document.write(`Nilai Awal: ${string}<br/>`);
+
+      for (let i = string.length - 1; i >= 0; i--) {
+        if (string[i] !== targetCharacter) {
+          string =
+            string.substring(0, i) + targetCharacter + string.substring(i + 1);
+          console.log(`Looping ke-${string.length - i}: ${string}`);
+          document.write(`Looping ke-${string.length - i}: ${string}<br/>`);
+        }
+      }
+
+      // Cetak hasil
+      document.write("Hasil: ", string);
+    </script>
+  </body>
+</html>
